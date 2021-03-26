@@ -9,7 +9,19 @@
     <script src="main.js"></script>
 </head>
 <body>
+        <div id="app">
+            <p v-html="content"></p>
+            <p v-text="content"></p>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    
+        <script>
+            var app = new Vue({
+                el:"#app",
+                data:{
+                    // content:"aaaa"
+                    content:"<a href='https://www.baidu.com'>zouni</a>"
+                }
+            })
+        </script>
 </body>
 </html>
