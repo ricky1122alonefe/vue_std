@@ -10,25 +10,16 @@
 </head>
 <body>
         <div id="app">
-            <input type="button" value="v-on指令"  v-on:click="tests">
-            <input type="button" value="haha" @click="tests">
-            <input type="button" value="aaaa" @doubleclick="tests">
-            <h2 @click="change">{{food}}</h2>
+                <p v-html="content"></p>
+                <p v-text="content"></p>
             </div>
             <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
             <script>
                 var app = new Vue({
                     el:"#app",
                     data:{
-                        food:"小排骨"
-                    },
-                    methods:{
-                        tests:function(){
-                            alert("tewwww")
-                        },
-                        change:function(){
-                            this.food += "出啊";
-                        }
+                        // content:"aaaa"
+                        content:"<a href='https://www.baidu.com'>zouni</a>"
                     }
                 })
             </script>
