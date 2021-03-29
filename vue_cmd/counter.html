@@ -10,16 +10,37 @@
 </head>
 <body>
         <div id="app">
-                <p v-html="content"></p>
-                <p v-text="content"></p>
+            <div class="input-num">
+                    <button @click="add"></button>
+                    <span>{{ num}}</span>
+                    <button @click="sub"></button>
+            </div>
             </div>
             <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
             <script>
                 var app = new Vue({
                     el:"#app",
                     data:{
-                        // content:"aaaa"
-                        content:"<a href='https://www.baidu.com'>zouni</a>"
+                      num:1
+                    },
+                    methods:{
+                        add:function(){
+                            console.log('add');
+                            if (this.num>10){
+                                alert("max");
+                            }else{
+                                this.num++;
+                            }
+                            
+                        },
+                        sub:function(){
+                            console.log('sub');
+                            if (this.num>0){
+                            this.num--;
+                            }else{
+                                alert("min")
+                            }
+                        }
                     }
                 })
             </script>
